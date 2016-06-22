@@ -2,7 +2,7 @@ import os
 import re
 
 
-class GetDependancies:
+class GetDependencies:
     def __init__(self):
         self.top_level_path = os.getcwd()
         folder_list = self.get_folder_list()
@@ -50,7 +50,7 @@ class GetDependancies:
         containers = os.listdir(directory)
         python_files = []
         for containor in containers:
-            if ".py" in containor and "get_dependancies" not in containor:
+            if ".py" in containor and "get_dependencies" not in containor:
                 python_files.append(containor)
         return python_files
 
@@ -170,7 +170,7 @@ class GetDependancies:
         print "Check completed! Check dependency_list.txt for errors!"
 
 
-checker = GetDependancies()
+checker = GetDependencies()
 checker.run()
 
 
